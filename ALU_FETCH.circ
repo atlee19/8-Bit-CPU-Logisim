@@ -784,9 +784,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(680,290)" to="(690,290)"/>
     <wire from="(660,190)" to="(660,290)"/>
     <wire from="(230,220)" to="(230,310)"/>
-    <comp lib="6" loc="(643,361)" name="Text">
-      <a name="text" val="Turn on Chip Select and Load Data"/>
-    </comp>
     <comp loc="(590,580)" name="ALU"/>
     <comp lib="0" loc="(140,220)" name="Pin">
       <a name="tristate" val="false"/>
@@ -796,17 +793,17 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="tristate" val="false"/>
       <a name="label" val="Chip Select"/>
     </comp>
-    <comp lib="6" loc="(664,321)" name="Text">
+    <comp lib="6" loc="(959,119)" name="Text">
       <a name="text" val="Note: data can flow either direction - in or out of RAM"/>
+    </comp>
+    <comp lib="6" loc="(906,183)" name="Text">
+      <a name="text" val="Turn on Chip Select and Load Data"/>
     </comp>
     <comp lib="6" loc="(257,131)" name="Text">
       <a name="text" val="Each time you clock 0--&gt;1--&gt;0"/>
     </comp>
     <comp lib="4" loc="(730,150)" name="RAM">
       <a name="dataWidth" val="16"/>
-    </comp>
-    <comp lib="6" loc="(679,383)" name="Text">
-      <a name="text" val="Do Not Clock, it's used to move data into RAM"/>
     </comp>
     <comp lib="0" loc="(620,290)" name="Pin">
       <a name="tristate" val="false"/>
@@ -818,8 +815,14 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="Load Data"/>
       <a name="labelloc" val="east"/>
     </comp>
+    <comp lib="6" loc="(938,222)" name="Text">
+      <a name="text" val="Do Not Clock, it's used to move data into RAM"/>
+    </comp>
     <comp lib="6" loc="(230,109)" name="Text">
       <a name="text" val="Enable the PC_IR chip"/>
+    </comp>
+    <comp lib="6" loc="(915,146)" name="Text">
+      <a name="text" val="We only need data flowing out of RAM"/>
     </comp>
     <comp lib="6" loc="(237,86)" name="Text">
       <a name="text" val="Load RAM with program"/>
@@ -870,9 +873,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="text" val="Next instruction is loaded "/>
     </comp>
     <comp loc="(280,190)" name="PC_IR"/>
-    <comp lib="6" loc="(651,339)" name="Text">
-      <a name="text" val="We only need data flowing out of RAM"/>
-    </comp>
   </circuit>
   <circuit name="PC_IR">
     <a name="circuit" val="PC_IR"/>
