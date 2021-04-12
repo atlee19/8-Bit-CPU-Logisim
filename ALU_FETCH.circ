@@ -750,19 +750,25 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(740,640)" to="(840,640)"/>
     <wire from="(340,210)" to="(390,210)"/>
     <wire from="(730,150)" to="(750,150)"/>
     <wire from="(340,200)" to="(340,210)"/>
     <wire from="(750,150)" to="(750,210)"/>
     <wire from="(360,200)" to="(420,200)"/>
     <wire from="(390,300)" to="(450,300)"/>
+    <wire from="(840,640)" to="(910,640)"/>
+    <wire from="(40,860)" to="(840,860)"/>
     <wire from="(700,190)" to="(700,260)"/>
     <wire from="(420,200)" to="(540,200)"/>
+    <wire from="(40,680)" to="(40,860)"/>
     <wire from="(140,220)" to="(150,220)"/>
     <wire from="(330,210)" to="(330,310)"/>
     <wire from="(640,190)" to="(640,270)"/>
     <wire from="(150,210)" to="(250,210)"/>
+    <wire from="(40,680)" to="(120,680)"/>
     <wire from="(140,180)" to="(150,180)"/>
+    <wire from="(290,700)" to="(590,700)"/>
     <wire from="(620,270)" to="(640,270)"/>
     <wire from="(540,150)" to="(590,150)"/>
     <wire from="(280,210)" to="(330,210)"/>
@@ -776,6 +782,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(360,190)" to="(360,200)"/>
     <wire from="(140,200)" to="(250,200)"/>
     <wire from="(540,150)" to="(540,200)"/>
+    <wire from="(840,640)" to="(840,860)"/>
     <wire from="(450,280)" to="(450,300)"/>
     <wire from="(230,220)" to="(250,220)"/>
     <wire from="(390,210)" to="(750,210)"/>
@@ -798,6 +805,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="6" loc="(230,109)" name="Text">
       <a name="text" val="Enable the PC_IR chip"/>
     </comp>
+    <comp loc="(740,640)" name="ALU"/>
     <comp lib="6" loc="(906,183)" name="Text">
       <a name="text" val="Turn on Chip Select and Load Data"/>
     </comp>
@@ -834,7 +842,12 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="Load Data"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp loc="(740,650)" name="ALU"/>
+    <comp lib="0" loc="(910,640)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="labelloc" val="east"/>
+    </comp>
     <comp loc="(280,190)" name="PC_IR"/>
     <comp lib="0" loc="(420,160)" name="Pin">
       <a name="facing" val="south"/>
