@@ -755,6 +755,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(730,150)" to="(750,150)"/>
     <wire from="(340,200)" to="(340,210)"/>
     <wire from="(750,150)" to="(750,210)"/>
+    <wire from="(170,990)" to="(240,990)"/>
     <wire from="(360,200)" to="(420,200)"/>
     <wire from="(390,300)" to="(450,300)"/>
     <wire from="(840,640)" to="(910,640)"/>
@@ -762,7 +763,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(700,190)" to="(700,260)"/>
     <wire from="(420,200)" to="(540,200)"/>
     <wire from="(40,680)" to="(40,860)"/>
-    <wire from="(140,220)" to="(150,220)"/>
     <wire from="(330,210)" to="(330,310)"/>
     <wire from="(640,190)" to="(640,270)"/>
     <wire from="(150,210)" to="(250,210)"/>
@@ -771,12 +771,13 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(290,700)" to="(590,700)"/>
     <wire from="(620,270)" to="(640,270)"/>
     <wire from="(540,150)" to="(590,150)"/>
+    <wire from="(170,1040)" to="(240,1040)"/>
     <wire from="(280,210)" to="(330,210)"/>
+    <wire from="(170,940)" to="(240,940)"/>
     <wire from="(390,210)" to="(390,300)"/>
     <wire from="(620,290)" to="(660,290)"/>
     <wire from="(150,180)" to="(150,190)"/>
     <wire from="(280,190)" to="(360,190)"/>
-    <wire from="(150,210)" to="(150,220)"/>
     <wire from="(280,200)" to="(340,200)"/>
     <wire from="(420,160)" to="(420,200)"/>
     <wire from="(360,190)" to="(360,200)"/>
@@ -785,33 +786,24 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(840,640)" to="(840,860)"/>
     <wire from="(450,280)" to="(450,300)"/>
     <wire from="(230,220)" to="(250,220)"/>
+    <wire from="(140,240)" to="(150,240)"/>
     <wire from="(390,210)" to="(750,210)"/>
     <wire from="(150,190)" to="(250,190)"/>
     <wire from="(680,190)" to="(680,290)"/>
     <wire from="(680,290)" to="(690,290)"/>
+    <wire from="(150,210)" to="(150,240)"/>
     <wire from="(660,190)" to="(660,290)"/>
     <wire from="(230,220)" to="(230,310)"/>
     <comp lib="0" loc="(140,200)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="Enable"/>
     </comp>
-    <comp lib="0" loc="(230,310)" name="Pin">
-      <a name="facing" val="north"/>
-      <a name="output" val="true"/>
-      <a name="width" val="8"/>
-      <a name="label" val="8-bit inst"/>
-      <a name="labelloc" val="south"/>
-    </comp>
     <comp lib="6" loc="(230,109)" name="Text">
       <a name="text" val="Enable the PC_IR chip"/>
     </comp>
-    <comp loc="(740,640)" name="ALU"/>
-    <comp lib="6" loc="(906,183)" name="Text">
-      <a name="text" val="Turn on Chip Select and Load Data"/>
-    </comp>
-    <comp lib="0" loc="(140,180)" name="Pin">
+    <comp lib="0" loc="(170,990)" name="Pin">
       <a name="tristate" val="false"/>
-      <a name="label" val="Clear"/>
+      <a name="label" val="Clock"/>
     </comp>
     <comp lib="6" loc="(257,131)" name="Text">
       <a name="text" val="Each time you clock 0--&gt;1--&gt;0"/>
@@ -825,8 +817,64 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="6" loc="(237,86)" name="Text">
       <a name="text" val="Load RAM with program"/>
     </comp>
-    <comp lib="6" loc="(959,119)" name="Text">
-      <a name="text" val="Note: data can flow either direction - in or out of RAM"/>
+    <comp lib="0" loc="(910,640)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(420,160)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="label" val="Current Addr"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(170,940)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="Enable"/>
+    </comp>
+    <comp lib="0" loc="(620,270)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="Chip Select"/>
+    </comp>
+    <comp lib="0" loc="(140,240)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Clock"/>
+      <a name="labelfont" val="SansSerif plain 11"/>
+    </comp>
+    <comp lib="4" loc="(730,150)" name="RAM">
+      <a name="dataWidth" val="16"/>
+    </comp>
+    <comp lib="6" loc="(245,153)" name="Text">
+      <a name="text" val="Next instruction is loaded "/>
+    </comp>
+    <comp lib="0" loc="(230,310)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="label" val="8-bit inst"/>
+      <a name="labelloc" val="south"/>
+    </comp>
+    <comp lib="6" loc="(906,183)" name="Text">
+      <a name="text" val="Turn on Chip Select and Load Data"/>
+    </comp>
+    <comp loc="(740,640)" name="ALU"/>
+    <comp lib="0" loc="(140,180)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="Clear"/>
+    </comp>
+    <comp lib="0" loc="(240,990)" name="Tunnel">
+      <a name="label" val="Clock"/>
+      <a name="labelfont" val="SansSerif plain 11"/>
+    </comp>
+    <comp lib="0" loc="(240,940)" name="Tunnel">
+      <a name="label" val="Enable"/>
+      <a name="labelfont" val="SansSerif plain 11"/>
+    </comp>
+    <comp lib="0" loc="(170,1040)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="Clear"/>
     </comp>
     <comp lib="0" loc="(330,310)" name="Pin">
       <a name="facing" val="north"/>
@@ -835,27 +883,17 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="8-bit imm value"/>
       <a name="labelloc" val="south"/>
     </comp>
-    <comp loc="(290,600)" name="Register File"/>
+    <comp lib="6" loc="(959,119)" name="Text">
+      <a name="text" val="Note: data can flow either direction - in or out of RAM"/>
+    </comp>
     <comp lib="0" loc="(690,290)" name="Pin">
       <a name="facing" val="west"/>
       <a name="tristate" val="false"/>
       <a name="label" val="Load Data"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(910,640)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="8"/>
-      <a name="labelloc" val="east"/>
-    </comp>
+    <comp loc="(290,600)" name="Register File"/>
     <comp loc="(280,190)" name="PC_IR"/>
-    <comp lib="0" loc="(420,160)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="output" val="true"/>
-      <a name="width" val="8"/>
-      <a name="label" val="Current Addr"/>
-      <a name="labelloc" val="north"/>
-    </comp>
     <comp lib="0" loc="(620,290)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="Clock"/>
@@ -863,22 +901,12 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="6" loc="(938,222)" name="Text">
       <a name="text" val="Do Not Clock, it's used to move data into RAM"/>
     </comp>
-    <comp lib="0" loc="(620,270)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="Chip Select"/>
-    </comp>
-    <comp lib="0" loc="(140,220)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="Clock"/>
-    </comp>
-    <comp lib="4" loc="(730,150)" name="RAM">
-      <a name="dataWidth" val="16"/>
+    <comp lib="0" loc="(240,1040)" name="Tunnel">
+      <a name="label" val="Clear"/>
+      <a name="labelfont" val="SansSerif plain 11"/>
     </comp>
     <comp lib="6" loc="(915,146)" name="Text">
       <a name="text" val="We only need data flowing out of RAM"/>
-    </comp>
-    <comp lib="6" loc="(245,153)" name="Text">
-      <a name="text" val="Next instruction is loaded "/>
     </comp>
     <comp lib="0" loc="(450,280)" name="Pin">
       <a name="facing" val="south"/>
