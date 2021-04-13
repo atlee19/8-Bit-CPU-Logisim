@@ -4,6 +4,8 @@
 ## Instructions for loading test program:
 Right click on RAM > Load Image > testprogram.obj
 
+* Make sure to enable 'Load Data'
+
 Test program translation
 ```
 Machine code         Assembly
