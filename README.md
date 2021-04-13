@@ -4,6 +4,25 @@
 ## Instructions for loading test program:
 Right click on RAM > Load Image > testprogram.obj
 
+Test program translation
+```
+Machine code         Assembly
+f118                 mov 24, r1
+2600                 add r1, r2
+0400                 inc r1 
+a3fd                 add -3, r3
+3700                 sub r1, r3
+1c00                 dec r3
+f00f                 mov 15, r0
+e000                 halt (not included in our ISA)
+```
+
+### ⛔️ Broken Instructions
+```
+2600                 add r1, r2     Not producing correct 6 bit ALU opcode
+0400                 inc r1         Not producing correct 6 bit ALU opcode
+```
+
 ## Links
 Link to control matrix sheet: https://docs.google.com/spreadsheets/d/1q5ler1lktvx4j2TuqqX3yOqUN5U9RWflokVJhNfCc8M/edit?usp=sharing
 
