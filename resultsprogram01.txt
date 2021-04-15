@@ -1,0 +1,18 @@
+Machine code         Assembly                               Result
+f118                 mov 24, r1                             Works
+2600                 add r1, r2                             Works
+0400                 inc r1                                 Did NOT work 
+a3fd                 add -3, r3                             Works
+3700                 sub r1, r3                             Works
+1c00                 dec r3                                 Works
+f00f                 mov 15, r0                             Works
+e000                 halt (not included in our ISA)
+
+Explanation of why the inc r1 doesn't work:
+
+• We used the wrong 6 bit opcode as our translation target
+• We used Function A + 1 which resulted in this opcode 111001
+• We should have used B + 1 110101
+
+To fix this would require a complete overhaul of the 6 karnaugh maps and
+we have unfortunately run out of time.
